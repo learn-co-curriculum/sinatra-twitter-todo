@@ -60,4 +60,4 @@ In other words, what this test is expecting is that all of our code, from start 
 * [Rack Middleware](http://www.sinatrarb.com/intro.html#Rack%20Middleware)
 * [Rack::Test Module in Sinatra](http://www.sinatrarb.com/intro.html#Testing)
 
-<a href='https://learn.co/lessons/sinatra-twitter-todo' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-twitter-todo' title='Sinatra Twitter Todo'>Sinatra Twitter Todo</a> on Learn.co and start learning to code for free.</p>
