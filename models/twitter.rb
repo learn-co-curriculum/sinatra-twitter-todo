@@ -2,14 +2,14 @@
 
 # Our Gemfile has the twitter gem and config/environment requires it through Bundler.
 
-class GetTweets
+class TwitterClient
   attr_reader :handle
 
   def initialize(handle)
     @handle = handle
   end
 
-  TWITTER = Twitter::REST::Client.new do |config|
+  CLIENT = Twitter::REST::Client.new do |config|
     # go to https://dev.twitter.com/apps and create your own twitter app. Then grab your keys and replace these ones
     config.consumer_key = "SOo0mIfGvsFVP7OlrNVaRS7bE"
     config.consumer_secret = "yzNnxhbZknAcIOWXiPAL7UWVrdqr3hBYgLJPs6sTqaYiCVEXHh"
@@ -18,12 +18,8 @@ class GetTweets
   end
 
   def get_search_results
-    twitter_search_results = []
-    TWITTER.search(handle).each do |tweet|
-      # we're saving the tweet user's name and the tweet text in an array of arrays
-      twitter_search_results << [tweet.user.name, tweet.text]
-    end
-    twitter_search_results
+    #user_timeline returns an array of TWEET objects.
+    CLIENT.user_timeline(handle)
   end
 
 end
